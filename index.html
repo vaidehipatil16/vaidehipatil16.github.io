@@ -231,22 +231,25 @@
 
               <li>
                 <p>
-                    <strong><a href="https://arxiv.org/abs/2502.15082" target="_blank">UPCORE: Utility-Preserving Coreset Selection for Balanced Unlearning</a></strong> 
+                    <strong><a href="https://openreview.net/forum?id=YcnjgKbZQS" target="_blank">Unlearning Sensitive Information in Multimodal LLMs: Benchmark and Attack-Defense Evaluation</a></strong> 
                     &nbsp; 
-                    <a class="text-button3">Preprint</a>
+                    <a class="text-button3">TMLR 2024</a>
                     <br> 
-                    Vaidehi Patil, Elias Stengel-Eskin, Mohit Bansal
+                    Vaidehi Patil, Yi-Lin Sung, Peter Hase, Jie Peng, Tianlong Chen, Mohit Bansal
                     <br> 
                     <a href="javascript:toggleblock('dash_abs21')">Abstract</a> | 
-                    <a href="https://arxiv.org/abs/2502.15082">ArXiv</a> | 
-                    <a href="https://github.com/Vaidehi99/UPCORE" target="_blank">
+                    <a href="https://openreview.net/forum?id=YcnjgKbZQS">ArXiv</a> | 
+                    <a href="https://github.com/Vaidehi99/UnLOK-VQA" target="_blank">
                         <i class="fa fa-github w3-hover-opacity"></i>
                     </a> | 
+                    <a href="https://drive.google.com/file/d/13SWGsoj_rGGLawFD9zYzQUBUfuGIvTc3/view?usp=sharing">Talk</a> | 
+                    <a href="https://drive.google.com/file/d/1h3fDGin0lbWj5-y-5lpqdhg65XOTOa1m/view?usp=sharing">Slides</a> |
+                    <a href="https://huggingface.co/datasets/vaidehi99/UnLOK-VQA">Dataset</a> | 
                 </p>
                 
                 <p align="justify">
                     <i style="display: none;" id="dash_abs21">
-                      User specifications or legal frameworks often require information to be removed from pretrained models, including large language models (LLMs). This requires deleting or "forgetting" a set of data points from an already-trained model, which typically degrades its performance on other data points. Thus, a balance must be struck between removing information and keeping the model's other abilities intact, with a failure to balance this trade-off leading to poor deletion or an unusable model. To this end, we propose UPCORE (Utility-Preserving Coreset Selection), a method-agnostic data selection framework for mitigating collateral damage during unlearning. Finding that the model damage is correlated with the variance of the model's representations on the forget set, we selectively prune the forget set to remove outliers, thereby minimizing model degradation after unlearning. We evaluate UPCORE across three standard unlearning methods consistently achieving a superior balance between the competing objectives of deletion efficacy and model preservation. To better evaluate this trade-off, we introduce a new metric, measuring the area-under-the-curve (AUC) across standard metrics. We find that UPCORE improves both standard metrics and AUC, benefitting from positive transfer between the coreset and pruned points while reducing negative transfer from the forget set to points outside of it.
+                      Large Language Models (LLMs) trained on massive datasets may inadvertently acquire sensitive information such as personal details and potentially harmful content. This risk is further heightened in multimodal LLMs (aka MLLMs) as they integrate information from multiple modalities (image and text). Adversaries can exploit this stored knowledge by crafting inputs across modalities to extract sensitive details. Evaluating how effectively MLLMs can forget such information (targeted unlearning) necessitates the creation of high-quality, well-annotated image-text pairs. While significant research has addressed the creation of datasets for unlearning within LLMs, it has primarily concentrated on text modality. Creation of analogous datasets for multimodal data and models remain an understudied area. To address this gap, we first introduce a multimodal unlearning benchmark, UnLOK-VQA (Unlearning Outside Knowledge VQA), as well as an “attack and-defense” framework to evaluate methods for deleting specific multimodal knowledge from MLLMs. Our dataset generation process involves an automated pipeline to create samples of varied proximity levels to the target data point for evaluation of generalization and specificity, followed by manual filtering to retain only the high-quality data points. We use this process to extend a visual question-answering dataset for evaluating multimodal information deletion. Next, we present a comprehensive unlearning evaluation involving an attack-and-defense framework consisting of four white box and three blackbox attacks against six unlearning defense objectives. We also design a whitebox attack based on the interpretability of hidden states in LLMs motivated by past work. Our experimental results demonstrate that multimodal extraction attacks (with an attack success rate of 45.5%) are more successful than either image-only (32%) or text-only attacks (39%). The best overall defense mechanism, which removes answer information from internal model hidden states, reduces the success rate of multimodal attack to 15.7%. Furthermore, our findings suggest that larger models exhibit greater resilience to attacks, implying that model scaling could be a valuable strategy for enhancing robustness and developing safer models. UnLOK-VQA thus facilitates a comprehensive evaluation of unlearning in MLLMs and serves as a challenging benchmark for future research in unlearning.
                     </i>
                 </p>
             </li>
@@ -254,7 +257,7 @@
 
             <li>
               <p>
-                  <strong><a href="https://arxiv.org/abs/2502.15082" target="_blank">UPCORE: Utility-Preserving Coreset Selection for Balanced Unlearning</a></strong> 
+                  <strong><a href="https://arxiv.org/abs/2502.15082" target="_blank">REFINESUMM: Self-Refining MLLM for Generating a Multimodal Summarization Dataset</a></strong> 
                   &nbsp; 
                   <a class="text-button3">Preprint</a>
                   <br> 
@@ -272,7 +275,7 @@
                     User specifications or legal frameworks often require information to be removed from pretrained models, including large language models (LLMs). This requires deleting or "forgetting" a set of data points from an already-trained model, which typically degrades its performance on other data points. Thus, a balance must be struck between removing information and keeping the model's other abilities intact, with a failure to balance this trade-off leading to poor deletion or an unusable model. To this end, we propose UPCORE (Utility-Preserving Coreset Selection), a method-agnostic data selection framework for mitigating collateral damage during unlearning. Finding that the model damage is correlated with the variance of the model's representations on the forget set, we selectively prune the forget set to remove outliers, thereby minimizing model degradation after unlearning. We evaluate UPCORE across three standard unlearning methods consistently achieving a superior balance between the competing objectives of deletion efficacy and model preservation. To better evaluate this trade-off, we introduce a new metric, measuring the area-under-the-curve (AUC) across standard metrics. We find that UPCORE improves both standard metrics and AUC, benefitting from positive transfer between the coreset and pruned points while reducing negative transfer from the forget set to points outside of it.
                   </i>
               </p>
-          </li>
+            </li>
               
               
                 <li> 
